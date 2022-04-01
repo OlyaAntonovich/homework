@@ -3,6 +3,9 @@ package home_work_2.loops;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+//Перемножить числа от 1 до числа (включительно) введенного через аргумент к исполняемой программе
+
 public class HW_2_1_1_1 {
     public static void main(String[] args) {
         String x = args[0];
@@ -15,13 +18,13 @@ public class HW_2_1_1_1 {
 
             int i = 1;
             long fac_n = 1;
-            String v;
+
 
             while (i <= n) {
 
                 fac_n = i*fac_n;
 
-                if (fac_n>Long.MAX_VALUE||fac_n<0){
+                if (fac_n>Long.MAX_VALUE||fac_n<0){ //Проверка на переполнение
 
                     System.out.println ("\nВведено слишком большое число, вы достигли переполнения!\n");
                     break;
@@ -43,6 +46,11 @@ public class HW_2_1_1_1 {
 
     }
 
+    /**
+     * Проверка строки на содержание целых положительных чисел
+     * @param x строка, которая проверяется на наличие целых положительных чисел
+     * @return "ответ" (true or false) на наличие целых положительных чисел в строке
+     */
 
     public static boolean Mach (String x){
         Pattern pattern = Pattern.compile ("^\\d+$");
