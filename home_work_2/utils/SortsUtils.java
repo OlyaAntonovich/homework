@@ -8,7 +8,7 @@ public class SortsUtils {
      * @param arr получаемый методом массив чисел
      */
 
-    public static void bubble (int [] arr){
+    public static void buble (int [] arr){
         int i= 0;
         int n = arr.length;
 
