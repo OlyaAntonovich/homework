@@ -44,7 +44,7 @@ public class ArraysTasks {
        int x = 1;
        int y = 1;
        int summ = 0;
-       int [] container = ArraysUtils.arrayRandom (x, y);
+       int [] container = home_work_2.arrays.ArraysUtils.arrayRandom (x, y);
 
         for(int i=0; i<container.length; i++){
             if (container[i]>0 && container[i]%2==0) {
@@ -63,7 +63,7 @@ public class ArraysTasks {
         int x = 1;
         int y = 1;
 
-        int [] container = ArraysUtils.arrayRandom (x, y);
+        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom (x, y);
         int Max = container[0];
 
         for(int i=0; i<container.length; i=i+2){
@@ -85,7 +85,7 @@ public class ArraysTasks {
         int x = 1;
         int y = 1;
 
-        int [] container = ArraysUtils.arrayRandom(x, y);
+        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom(x, y);
         int summ = 0;
 
 
@@ -115,7 +115,7 @@ public class ArraysTasks {
         int x = 1;
         int y = 1;
 
-        int [] container = ArraysUtils.arrayRandom(x, y);
+        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom(x, y);
 
         int Min = container [0];
         int n = 0;
@@ -158,7 +158,7 @@ public class ArraysTasks {
         int x = 1;
         int y = 1;
 
-        int [] container = ArraysUtils.arrayRandom(x, y);
+        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom(x, y);
 
         Random r = new Random();
 
@@ -207,7 +207,7 @@ public class ArraysTasks {
         int x = 1;
         int y = 1;
 
-        int [] container = ArraysUtils.arrayRandom(x, y);
+        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom(x, y);
 
         Random r = new Random();
         int i;
