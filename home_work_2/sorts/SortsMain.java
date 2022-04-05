@@ -12,7 +12,7 @@ public class SortsMain {
         Arrays.toString(x);
         System.out.println("Массив до сортировки:" + Arrays.toString(x));
 
-        SortsUtils.buble (x);
+        SortsUtils.shake (x);
 
         Arrays.toString(x);
         System.out.println("Массив после сортировки:" + Arrays.toString(x));
@@ -32,7 +32,7 @@ public class SortsMain {
         Arrays.toString(m);
         System.out.println("Массив до сортировки:" + Arrays.toString(m));
 
-        SortsUtils.buble (m);
+        SortsUtils.shake (m);
 
         Arrays.toString(m);
         System.out.println("Массив после сортировки:" + Arrays.toString(m));
@@ -52,7 +52,7 @@ public class SortsMain {
         Arrays.toString(e);
         System.out.println("Массив до сортировки:" + Arrays.toString(e));
 
-        SortsUtils.buble (e);
+        SortsUtils.shake (e);
 
         Arrays.toString(e);
         System.out.println("Массив после сортировки:" + Arrays.toString(e));

@@ -26,7 +26,7 @@ public class ArraysIteration {
 
     public static String vyvodVse (){
 
-        int [] container = ArraysUtils.arrayFromConsole ();
+        int [] container = home_work_2.arrays.ArraysUtils.arrayFromConsole ();
         String v = " ";
         int i = 0;
 
@@ -79,7 +79,7 @@ public class ArraysIteration {
 
     public static String vyvodVtoroj () {
 
-        int [] container = ArraysUtils.arrayFromConsole ();
+        int [] container = home_work_2.arrays.ArraysUtils.arrayFromConsole ();
         String v = " ";
         int i = 0;
         for (i=0;i<container.length; i++) {
@@ -130,7 +130,7 @@ public class ArraysIteration {
      */
 
     public static String vyvodNaoborot (){
-        int [] container = ArraysUtils.arrayFromConsole ();
+        int [] container = home_work_2.arrays.ArraysUtils.arrayFromConsole ();
         String v = " ";
         int i = 0;
 

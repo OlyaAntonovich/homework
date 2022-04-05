@@ -39,32 +39,31 @@ public class SortsUtils {
 
         int i=0;
         int r = arr.length-1;
-        int f=1;
         int l=0;
 
-        while ((i<r)&&f>0){
-            f=0;
-            for(i=0; i<r; i++){
+        while (i<=r){
+
+            for(i=0; i<r; ++i){
                 if (arr[i]>arr[i+1]){
                     int v = arr[i];
                     arr[i] = arr[i+1];
                     arr[i+1] = v;
-                    f=1;
+
                 }
             }
-            r--;
+            --r;
 
 
-            for(i=(arr.length-1); i>l; i--){
+            for(i=(arr.length-1); i>l; --i){
                 if (arr[i-1]>arr[i]){
                     int v = arr[i-1];
                     arr[i-1] = arr[i];
                     arr[i] = v;
-                    f=1;
+
                 }
-                l++;
 
             }
+            ++l;
         }
 
 
