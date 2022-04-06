@@ -9,13 +9,18 @@ ArraysIteration решает пункт 2.2 ДЗ
 
 SortPuzyr решает пункт 3 ДЗ
 
-SortsUtils решает пункты 4.1.1-4.1.2 ДЗ
+SortsUtils решает пункты 4.1.1-4.1.2* ДЗ
 
-SortsMain решает пункты 4.2.1-4.2.2
+SortsMain решает пункты 4.2.1-4.2.2*
 
 -----------------------------------
 
 После основного срока сдачи ДЗ
 
 найдена ошибка в SortsUtils и исправлена
-TestRandom решает пункты 4.2.2-4.2.3
+
+TestRandom решает пункты 4.2.2*
+
+найдена и исправлена ошибка в п. 2.2 (rraysIteration для цикла foreach)
+
+IArraysOperation, WhileOperation, ForEachOperation, DoWhileOperation, ForOperation,ArraysAllMethods_2_3 ешают пункт 2.3* ДЗ

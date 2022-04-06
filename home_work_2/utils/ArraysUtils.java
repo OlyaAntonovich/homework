@@ -70,7 +70,7 @@ public class ArraysUtils {
             } else {v = v + "," + Integer.toString (x);}
 
         }
-        System.out.print("{"+ v + "}"+"\n");
+ //       System.out.print("{"+ v + "}"+"\n");
 
         return container;
 

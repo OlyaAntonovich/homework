@@ -54,7 +54,7 @@ public class ArraysIteration {
         v=" ";
 
         for ( int l:container) {
-            if (l==0){v =Integer.toString (l);
+            if (l==container[0]){v =Integer.toString (l);
             } else {v = v + "," + Integer.toString (l);}}
 
 
@@ -103,9 +103,11 @@ public class ArraysIteration {
 
 
         v=" ";
+        int n =0;
 
         for ( int l:container) {
-            if (l%2==0){v =v+" "+Integer.toString (l);
+            n++;
+            if (n%2==0){v =v+" "+Integer.toString (l);
             }
         }
 
@@ -158,7 +160,7 @@ public class ArraysIteration {
         v=" ";
 
         for ( int l:container) {
-            if (l==0){v =Integer.toString (l);
+            if (l==container[0]){v =Integer.toString (l);
             } else {v = Integer.toString (l)+","+v;}
 
 
