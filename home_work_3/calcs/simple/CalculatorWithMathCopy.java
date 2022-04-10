@@ -1,6 +1,6 @@
 package home_work_3.calcs.simple;
 
-public class CalculatorWithOperator {
+public class CalculatorWithMathCopy {
 
     double a;
     double b;
@@ -81,17 +81,7 @@ public class CalculatorWithOperator {
 
     public double getStep (){
 
-        double step=1;
-
-        if (f>0) {
-
-            for (int i = 1; i <= d; i++) {
-
-                step = f * step;
-            }
-        }
-
-        return step;
+        return Math.pow (f,d);
     }
 
 
@@ -108,37 +98,19 @@ public class CalculatorWithOperator {
 
     public double getAbs (){
 
-        double b;
-
-        if (c<0){
-            b = c*(-1);
-        } else {b = c;}
-        return b;
+        return Math.abs(c);
     }
 
 
-      /**
+    /**
      * вычисление квадратного корня из числа
      * @return - результат извлечения квадратного корня из числа
      */
 
-    public double getSqrt (int c){
+    public double getSqrt (){
 
-
-        double x;
-        double y = (double) a/2;
-
-        do {
-            x = y;
-            y = (x+(c/x))/2;
-
-        } while ((x-y)!=0);
-
-
-        return y;
+        return Math.sqrt(c);
 
     }
-
-
 
 }
