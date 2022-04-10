@@ -54,16 +54,14 @@ public class CalculatorWhithCounterClassic extends CalculatorWithMathExtends {
         return super.getSqrt(c);
     }
 
-    long count = 1;
+    long count = 0;
 
-    public void incrementCountOperation (long count){
+    public void incrementCountOperation (){
 
-        this.count = count;
+        count = count+1;
     }
 
     public long getCountOperation (){
-
-        count = count +1;
 
         return (count);
     }

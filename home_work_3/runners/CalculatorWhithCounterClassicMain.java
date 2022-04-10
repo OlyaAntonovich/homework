@@ -32,7 +32,7 @@ public class CalculatorWhithCounterClassicMain {
  //       System.out.println("Произведение двух чисел:" + proizv.getProizv());
 
 
-            count.incrementCountOperation(1);
+            count.incrementCountOperation();
  //       System.out.println(count.getCountOperation());
 
 
@@ -46,7 +46,7 @@ public class CalculatorWhithCounterClassicMain {
         del.setAB(a,b);
  //       System.out.println("Частное двух чисел:" + del.getDel());
 
-            count.getCountOperation();
+        count.incrementCountOperation();
 
 
         CalculatorWhithCounterClassic step = new CalculatorWhithCounterClassic();
@@ -54,15 +54,16 @@ public class CalculatorWhithCounterClassicMain {
          step.setFD(del.getDel(),2);
 
  //       System.out.println(step.getStep());
-        count.getCountOperation();
+        count.incrementCountOperation();
 
         CalculatorWhithCounterClassic sum1 = new CalculatorWhithCounterClassic();
         sum1.setAB(step.getStep(),proizv.getProizv());
         double sum2 = sum1.getSumm();
-        count.getCountOperation();
+        count.incrementCountOperation();
 
         CalculatorWhithCounterClassic sum = new CalculatorWhithCounterClassic();
         sum.setAB(4.1, sum2);
+        count.incrementCountOperation();
 
 
         DecimalFormat df = new DecimalFormat ("#.##");
