@@ -26,37 +26,30 @@ public class CalculatorWhithMathExtendsMain {
         double y = in.nextDouble();
 
 
-        CalculatorWithMathExtends proizv = new CalculatorWithMathExtends();
-        proizv.setAB(x,y);
-
- //      System.out.println("Произведение двух чисел:" + proizv.getProizv());
+        CalculatorWithMathExtends calc = new CalculatorWithMathExtends();
+        calc.setAB(x,y);
+        double proizv = calc.getProizv();
 
         System.out.println ("Введите число для определения частного:  ");
         double a = in.nextDouble();
         System.out.println ("Введите еще одно число для определения частного:  ");
         double b = in.nextDouble();
 
-        CalculatorWithMathExtends del = new CalculatorWithMathExtends();
-        del.setAB(a,b);
-//       System.out.println("Частное двух чисел:" + del.getDel());
+        calc.setAB(a,b);
+        calc.getDel();
+
+        calc.setFD(calc.getDel(),2);
+        calc.getStep();
 
 
-        CalculatorWithMathExtends step = new CalculatorWithMathExtends();
+        calc.setAB(calc.getStep(),proizv);
+        double sum1 = calc.getSumm();
 
-         step.setFD(del.getDel(),2);
-
- //       System.out.println(step.getStep());
-
-        CalculatorWithMathExtends sum1 = new CalculatorWithMathExtends();
-        sum1.setAB(step.getStep(),proizv.getProizv());
-        double sum2 = sum1.getSumm();
-
-        CalculatorWithMathExtends sum = new CalculatorWithMathExtends();
-        sum.setAB(4.1, sum2);
+        calc.setAB(4.1, sum1);
 
         DecimalFormat df = new DecimalFormat ("#.##");
 
-        System.out.println("результат выражения:4.1+ 15*7+(28/5)^2 = " + df.format(sum.getSumm()));
+        System.out.println("результат выражения:4.1+ 15*7+(28/5)^2 = " + df.format(calc.getSumm()));
 
 
 

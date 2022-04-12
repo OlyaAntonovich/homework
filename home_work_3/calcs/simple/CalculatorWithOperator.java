@@ -122,7 +122,7 @@ public class CalculatorWithOperator {
      * @return - результат извлечения квадратного корня из числа
      */
 
-    public double getSqrt (int c){
+    public double getSqrt (){
 
 
         double x;

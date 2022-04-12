@@ -47,7 +47,7 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator{
     }
 
     @Override
-    public double getSqrt(int c) {
+    public double getSqrt() {
         return Math.sqrt(c);
     }
 }

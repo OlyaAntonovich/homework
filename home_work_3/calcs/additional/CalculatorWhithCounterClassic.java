@@ -50,8 +50,8 @@ public class CalculatorWhithCounterClassic extends CalculatorWithMathExtends {
     }
 
     @Override
-    public double getSqrt(int c) {
-        return super.getSqrt(c);
+    public double getSqrt() {
+        return super.getSqrt();
     }
 
     long count = 0;
@@ -63,6 +63,6 @@ public class CalculatorWhithCounterClassic extends CalculatorWithMathExtends {
 
     public long getCountOperation (){
 
-        return (count);
+        return count;
     }
 }

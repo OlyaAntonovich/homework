@@ -26,37 +26,30 @@ public class CalculatorWhithMathCopyMain {
         double y = in.nextDouble();
 
 
-        CalculatorWithMathCopy proizv = new CalculatorWithMathCopy();
-        proizv.setAB(x,y);
+        CalculatorWithMathCopy calc = new CalculatorWithMathCopy();
+        calc.setAB(x,y);
+        double proizv = calc.getProizv();
 
- //      System.out.println("Произведение двух чисел:" + proizv.getProizv());
 
         System.out.println ("Введите число для определения частного:  ");
         double a = in.nextDouble();
         System.out.println ("Введите еще одно число для определения частного:  ");
         double b = in.nextDouble();
 
-        CalculatorWithMathCopy del = new CalculatorWithMathCopy();
-        del.setAB(a,b);
-//       System.out.println("Частное двух чисел:" + del.getDel());
+        calc.setAB(a,b);
+        calc.getDel();
 
+        calc.setFD(calc.getDel(),2);
+        calc.getStep();
 
-        CalculatorWithMathCopy step = new CalculatorWithMathCopy();
+        calc.setAB(calc.getStep(),proizv);
+        double sum1 = calc.getSumm();
 
-         step.setFD(del.getDel(),2);
-
- //       System.out.println(step.getStep());
-
-        CalculatorWithMathCopy sum1 = new CalculatorWithMathCopy();
-        sum1.setAB(step.getStep(),proizv.getProizv());
-        double sum2 = sum1.getSumm();
-
-        CalculatorWithMathCopy sum = new CalculatorWithMathCopy();
-        sum.setAB(4.1, sum2);
+        calc.setAB(4.1, sum1);
 
         DecimalFormat df = new DecimalFormat ("#.##");
 
-        System.out.println("результат выражения:4.1+ 15*7+(28/5)^2 = " + df.format(sum.getSumm()));
+        System.out.println("результат выражения:4.1+ 15*7+(28/5)^2 = " + df.format(calc.getSumm()));
 
 
 
