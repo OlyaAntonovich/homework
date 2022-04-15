@@ -27,7 +27,7 @@ public class CalculatorWhithMemoryMain {
         calculator.getProizv();
         calculator.Memory();
 
-        System.out.println(calculator.getMemory());
+//        System.out.println(calculator.getMemory());
 
         calculator.setAB(28,5);
         calculator.getDel();
@@ -38,7 +38,7 @@ public class CalculatorWhithMemoryMain {
         calculator.setAB(calculator.getStep(), calculator.getMemory());
         calculator.getSumm();
 
-        System.out.println(calculator.getSumm());
+ //       System.out.println(calculator.getSumm());
         calculator.Memory();
 
         calculator.setAB(4.1, calculator.getMemory());
