@@ -1,15 +1,15 @@
-package home_work_3.calcs.api;
+package home_work_3.calcs.additional.api;
 
 public interface ICalculator {
 
-    public void setAB(double a,double b );
-    public double getDel ();
-    public double getSumm ();
-    public double getSubtract ();
-    public double getProizv ();
-    public void setFD(double f,int d );
-    public double getStep ();
-    public void setC(double c);
-    public double getAbs ();
-    public double getSqrt ();
+    void setAB(double a,double b );
+     double getDel ();
+     double getSumm ();
+     double getSubtract ();
+     double getProizv ();
+     void setFD(double f,int d );
+     double getStep ();
+     void setC(double c);
+     double getAbs ();
+     double getSqrt ();
 }
