@@ -10,19 +10,17 @@ public class DataContainerMain {
     public static void main(String[] args) {
 
        DataID a = new DataID(5, "vasya");
-       DataID [] array = new DataID[1];
+       DataID [] array = new DataID[2];
        array [0] = a;
 
        DataContainer<DataID> b = new DataContainer<>(array);
-       for(int i = 0;i <b.getItems().length;i++){
-           System.out.println (Arrays.toString (b.getItems()));}
+       System.out.println ((b));//проверка работы to String() без вывода на печать ячеек,
+        // в которых хранится null
+
 
        DataID ol=new DataID (8,"sveta");
        DataID nu = null;
        System.out.println(b.add(ol));//проверка метода add(), если поле data не переполнено
-
-
-
 
         System.out.println(b.get(b.add(ol))); //проверка метода get(), если index в пределах массива
         b.add(nu);//проверка метода add(), если item=null
@@ -35,7 +33,7 @@ public class DataContainerMain {
        array1 [7] = 5;
        DataContainer<Integer> c = new DataContainer<>(array1);
 
-       System.out.println (Arrays.toString (c.getItems()));
+       System.out.println (c);
        Integer t = 25;
        System.out.println(c.add(t));
        System.out.println(c.get(1));
@@ -51,8 +49,7 @@ public class DataContainerMain {
        DataID [] array2 = new DataID[0];
 
        DataContainer<DataID> boo = new DataContainer<>(array2);
-        for(int i = 0;i <boo.getItems().length;i++){
-            System.out.println (Arrays.toString (boo.getItems()));}
+       System.out.println (Arrays.toString (boo.getItems()));
 
         DataID olo=new DataID (897,"tolya");
         boo.add(olo); //проверка метода add(), если поле data переполнено,
@@ -62,7 +59,7 @@ public class DataContainerMain {
 
 
         DataChel [] arr = {new DataChel(5,"Vasya"), new DataChel(9,"Katya"),
-                new DataChel(3,"Petr"),new DataChel(11,"Masha") };
+                new DataChel(3,"Petr"),new DataChel(11,"Masha")};
 
 
         DataContainer<DataChel> foo = new DataContainer<>(arr);

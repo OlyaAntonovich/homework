@@ -1,4 +1,4 @@
-package home_work_2.loops;
+package home_work_2.arrays.loops;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

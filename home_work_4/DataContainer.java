@@ -165,10 +165,16 @@ public class DataContainer <T>{
 
     @Override
     public String toString() {
-        return "DataContainer{" +
-                "data=" + Arrays.toString(data) +
-                ", item=" + item +
-                ", index=" + index +
-                '}';
+       String print = "";
+       String v= "";
+        for (int i = 0; i < data.length ; i++) {
+            if (data[i]==null){
+                print ="";
+            }else{print =""+ data[i];}
+            v=v+" "+print;
+
+
+        }
+        return("["+ v.replaceAll("\\s+", " ")+"]");
     }
 }

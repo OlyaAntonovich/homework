@@ -1,4 +1,4 @@
-package home_work_2.loops;
+package home_work_2.arrays.loops;
 
 // Вывести таблицу умножения в консоль (простым способом/до просмотра видео)
 public class HW_2_1_5 {
