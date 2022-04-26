@@ -9,9 +9,10 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class DataContainer <T>{
-    private T [] data;
+    private  T [] data;
     private T item;
     private int index;
+
 
 
     public DataContainer(T[] data) {
@@ -163,6 +164,55 @@ public class DataContainer <T>{
 
     }
 
+    /**
+     * метод sort, который принимает объект DataContainer с дженериком extends Comparable и
+     * сортирует элементы в переданном объекте
+     * @param container объект DataContainer
+     * @param <T> дженерик
+     */
+    public static <T extends Comparable<T>> void sort (DataContainer <T> container){
+
+
+        T x = null;
+
+
+        for(int i=0;i< container.data.length;i++){
+            for (int j=(container.data.length-1); j>i; j--){
+                if (container.data[j].compareTo(container.data[j-1])<0){
+                    x = container.data [j-1];
+                    container.data [j-1] = container.data [j];
+                    container.data[j] =x;
+                }
+            }
+
+        }
+        System.out.println(Arrays.toString(container.data));
+        }
+
+    /**
+     * метод sort принимает объект DataContainer и реализацию интерфейса Comparator,
+     * сортирует элементы в переданном объекте DataContainer
+     * @param comparator объект интерфейса Comparator
+     * @param <T> дженерик
+     */
+    public static <T> void sort (DataContainer <T> container, Comparator<T>comparator){
+        T x = null;
+
+        for(int i=0;i< container.data.length;i++){
+
+            for (int j=(container.data.length-1); j>i; j--){
+                if (comparator.compare((T) container.data[j],(T) container.data[j-1])<0){
+                    x = container.data [j-1];
+                    container.data [j-1] = container.data [j];
+                    container.data[j] =x;
+                }
+            }
+
+        }
+        System.out.println(Arrays.toString(container.data));
+    }
+
+
     @Override
     public String toString() {
        String print = "";
@@ -177,4 +227,6 @@ public class DataContainer <T>{
         }
         return("["+ v.replaceAll("\\s+", " ")+"]");
     }
+
+
 }

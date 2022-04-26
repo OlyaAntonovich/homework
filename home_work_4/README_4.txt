@@ -27,4 +27,10 @@ DataChel класс создан для проверки метода сорти
 
 (п.10) @Override метод toString() выводит содержимое data без ячеек в которых хранится null.
 
+(п.11) метод   <T extends Comparable<T>> void sort (DataContainer <T> container) принимает объект
+ DataContainer с дженериком extends Comparable и сортирует элементы в переданном объекте
+
+(п.12)  метод <T> void sort (DataContainer <T> container, Comparator<T>comparator) принимает объект
+DataContainer и реализацию интерфейса Comparator, сортирует элементы в переданном объекте
+
 Класс DataContainerMain - мэйн класс для запуска программы и реализации поставленной задачи
