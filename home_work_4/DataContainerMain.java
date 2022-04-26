@@ -35,7 +35,7 @@ public class DataContainerMain {
        array1 [2] = 5;
        array1 [9] = 5;
        DataContainer<Integer> c = new DataContainer<>(array1);
-//       sort(c);
+      sort(c);
 
 
 

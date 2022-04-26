@@ -180,11 +180,21 @@ public class DataContainer <T> {
 
 
         for(int i=0;i< container.data.length;i++){
-            for (int j=(container.data.length-1); j>i; j--){
-                if (container.data[j].compareTo(container.data[j-1])<0){
-                    x = container.data [j-1];
-                    container.data [j-1] = container.data [j];
-                    container.data[j] =x;
+            if (container.data[i] == null) {
+                System.out.println("низзя");
+                break;
+            } else {
+                for (int j = (container.data.length - 1); j > i; j--) {
+                    if (container.data[j] == null || container.data[j - 1] == null) {
+                        System.out.println("низзя");
+                        break;
+                    } else {
+                        if (container.data[j].compareTo(container.data[j - 1]) < 0) {
+                            x = container.data[j - 1];
+                            container.data[j - 1] = container.data[j];
+                            container.data[j] = x;
+                        }
+                    }
                 }
             }
 
@@ -201,18 +211,29 @@ public class DataContainer <T> {
     public static <T> void sort (DataContainer <T> container, Comparator<T>comparator){
         T x = null;
 
-        for(int i=0;i< container.data.length;i++){
 
-            for (int j=(container.data.length-1); j>i; j--){
-                if (comparator.compare((T) container.data[j],(T) container.data[j-1])<0){
-                    x = container.data [j-1];
-                    container.data [j-1] = container.data [j];
-                    container.data[j] =x;
+        for(int i=0;i< container.data.length;i++) {
+            if (container.data[i] == null) {
+                System.out.println("низзя");
+                break;
+            } else {
+
+                for (int j = (container.data.length - 1); j > i; j--) {
+                    if (container.data[j] == null || container.data[j - 1] == null) {
+                        System.out.println("низзя");
+                        break;
+                    } else {
+                        if (comparator.compare((T) container.data[j], (T) container.data[j - 1]) < 0) {
+                            x = container.data[j - 1];
+                            container.data[j - 1] = container.data[j];
+                            container.data[j] = x;
+                        }
+                    }
                 }
-            }
 
+            }
         }
-        System.out.println(Arrays.toString(container.data));
+       System.out.println(Arrays.toString(container.data));
     }
 
     /**
