@@ -5,10 +5,13 @@ package home_work_4;
  * обобщённого типа и совершать с ними различные операции
  */
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Iterator;
 
-public class DataContainer <T>{
+public class DataContainer <T> {
     private  T [] data;
     private T item;
     private int index;
@@ -212,6 +215,21 @@ public class DataContainer <T>{
         System.out.println(Arrays.toString(container.data));
     }
 
+    /**
+     * метод реализует интерфейс Iterable и
+     * получает все элементы объекта DataContainer по одному
+     * @param container объект DataContainer
+     * @param <T> дженерик
+     */
+
+    public static <T extends Iterable<T>> void perebor (DataContainer <T> container){
+
+        for(T item : container.data)
+        {
+            System.out.println(item);
+        }
+    }
+
 
     @Override
     public String toString() {
@@ -227,6 +245,7 @@ public class DataContainer <T>{
         }
         return("["+ v.replaceAll("\\s+", " ")+"]");
     }
+
 
 
 }

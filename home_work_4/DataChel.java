@@ -2,9 +2,10 @@ package home_work_4;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Iterator;
 import java.util.Objects;
 
-public class DataChel implements Comparable <DataChel> {
+public class DataChel implements Comparable <DataChel>, Iterable<DataChel> {
 
     int age;
     String name;
@@ -47,6 +48,12 @@ public class DataChel implements Comparable <DataChel> {
     @Override
     public int hashCode() {
         return Objects.hash(age, name);
+    }
+
+    @NotNull
+    @Override
+    public Iterator<DataChel> iterator() {
+        return null;
     }
 }
 

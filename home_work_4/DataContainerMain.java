@@ -6,6 +6,7 @@ import home_work_4.comporators.DataChelNameComporator;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import static home_work_4.DataContainer.perebor;
 import static home_work_4.DataContainer.sort;
 
 public class DataContainerMain {
@@ -34,6 +35,8 @@ public class DataContainerMain {
        array1 [2] = 5;
        array1 [9] = 5;
        DataContainer<Integer> c = new DataContainer<>(array1);
+//       sort(c);
+
 
 
        System.out.println (c);
@@ -66,6 +69,7 @@ public class DataContainerMain {
 
 
         DataContainer<DataChel> foo = new DataContainer<>(arr);
+        perebor(foo);
 
         sort(foo);// проверка  метода sort(), п. 11
 

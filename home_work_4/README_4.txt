@@ -33,4 +33,6 @@ DataChel класс создан для проверки метода сорти
 (п.12)  метод <T> void sort (DataContainer <T> container, Comparator<T>comparator) принимает объект
 DataContainer и реализацию интерфейса Comparator, сортирует элементы в переданном объекте
 
-Класс DataContainerMain - мэйн класс для запуска программы и реализации поставленной задачи
+(п.13) метод  <T extends Iterable<T>> void perebor () перебирает все элементы массива-объекта DataContainer
+
+Класс DataContainerMain - мэйн класс для запуска программы и реализации поставленных задач
