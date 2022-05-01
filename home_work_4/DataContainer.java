@@ -50,14 +50,14 @@ public class DataContainer <T> {
                 data1 [data1.length-1] = item;
                 index = data1.length-1;
                 data = data1;
-                System.out.println (Arrays.toString (data1));
+//                System.out.println (Arrays.toString (data1));
 
                 }else {
                 for (int i = 0; i <data.length; i++) {
                     if (data [i]==null){
                     data [i]=item;
                         index = i;
-                    System.out.println (Arrays.toString (data));
+ //                   System.out.println (Arrays.toString (data));
                     break;}
                 }
 
