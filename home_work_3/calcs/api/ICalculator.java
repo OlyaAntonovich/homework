@@ -7,7 +7,7 @@ public interface ICalculator {
      double getSumm ();
      double getSubtract ();
      double getProizv ();
-     void setFD(double f,int d );
+     void setFD(double f,double d );
      double getStep ();
      void setC(double c);
      double getAbs ();

@@ -1,11 +1,13 @@
 package home_work_3.calcs.adapter;
 
 import home_work_3.calcs.adapter.handler.AddHandler;
+import home_work_3.calcs.adapter.handler.DelHandler;
 import home_work_3.calcs.adapter.handler.PlusHandler;
 import home_work_3.calcs.adapter.handler.api.IHandler;
 import home_work_3.calcs.api.ICalculator;
 import home_work_3.calcs.simple.CalculatorWithMathExtends;
 
+import java.util.Objects;
 import java.util.PriorityQueue;
 
 public class CalculatorAdapter {
@@ -16,8 +18,10 @@ public class CalculatorAdapter {
     public CalculatorAdapter() {
 
         this.calculator = new CalculatorWithMathExtends();
-        queHandler.add (new AddHandler(this.calculator));
-        queHandler.add (new PlusHandler(this.calculator));
+        this.queHandler.add (new PlusHandler(this.calculator));
+        this.queHandler.add (new AddHandler(this.calculator));
+        this.queHandler.add (new DelHandler(this.calculator));
+
     }
 
     public double calc (String expression){
@@ -26,6 +30,19 @@ public class CalculatorAdapter {
             expression= handler.handle(expression);
         }
 
-        return Double.valueOf(expression);
+        return Double.parseDouble(expression);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CalculatorAdapter that = (CalculatorAdapter) o;
+        return Objects.equals(calculator, that.calculator) && Objects.equals(queHandler, that.queHandler);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(calculator, queHandler);
     }
 }

@@ -18,25 +18,8 @@ public class CalculatorWhithAdapterMain {
 
         CalculatorAdapter calculatorAdapter = new CalculatorAdapter ();
 
-       double result = calculatorAdapter.calc("4+5");
+       double result = calculatorAdapter.calc("5+20*4+8/4");
         System.out.println(result);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 

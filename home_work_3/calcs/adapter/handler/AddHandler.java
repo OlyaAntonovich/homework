@@ -9,25 +9,25 @@ import java.util.regex.Pattern;
 public class AddHandler extends PatternHandler implements IHandler {
     private final ICalculator calculator;
 
-
     public AddHandler(ICalculator calculator) {
-        super ("(\\d{1,}(\\.{0,1}\\d{1,}){1,}) * \\*  *(\\d{1,}(\\.{0,1}\\d{1,}){1,})");
+        super("(\\d{1,}(\\.\\d{1,}){0,1}) *\\* *(\\d{1,}(\\.\\d{1,}){0,1})");
         this.calculator = calculator;
-
     }
 
     @Override
     protected double calc(Matcher matcher) {
+
         String operand1 = matcher.group(1);
         String operand2 = matcher.group(3);
         calculator.setAB(Double.parseDouble(operand1),Double.parseDouble(operand2));
-        return calculator.getProizv();
+        double proizv = calculator.getProizv();
+        return proizv;
     }
 
 
 
     @Override
     public int getPriority() {
-        return 2;
+        return 4;
     }
 }

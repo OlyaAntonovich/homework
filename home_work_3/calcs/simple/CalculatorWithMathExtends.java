@@ -29,7 +29,7 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator implements
     }
 
     @Override
-    public void setFD(double f, int d) {
+    public void setFD(double f, double d) {
         super.setFD(f, d);
     }
 

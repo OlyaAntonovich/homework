@@ -68,9 +68,9 @@ public class CalculatorWithOperator implements ICalculator {
     }
 
     double f;
-    int d;
+    double d;
 
-    public void setFD(double f,int d ) {
+    public void setFD(double f,double d ) {
         this.f = f;
         this.d = d;
     }

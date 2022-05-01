@@ -63,7 +63,7 @@ public class CalculatorWithMemoryDecorator  implements ICalculator
         return this.icalculator.getDel();
     }
     @Override
-    public void setFD(double f, int d) {
+    public void setFD(double f, double d) {
 
         this.icalculator.setFD(f, d);
 
