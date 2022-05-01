@@ -5,7 +5,7 @@ public class ArraysAllMethods_2_3 {
         int x=1;
         int y=1;
 
-        int [] conteiner = home_work_2.arrays.ArraysUtils.arrayRandom (x, y);
+        int [] conteiner = home_work_2.utils.ArraysUtils.arrayRandom (x, y);
 
         DoWhileOperation arr = new DoWhileOperation();
         arr.vyvodVse (conteiner);

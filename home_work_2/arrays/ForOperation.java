@@ -5,14 +5,16 @@ public class ForOperation implements IArraysOperation {
     @Override
     public void vyvodVse(int[] x) {
 
-        String v = " ";
+        StringBuilder v = new StringBuilder(" ");
         int i = 0;
 
 
         for (i=0;i<x.length; i++) {
             int y = x [i];
-            if (i==0){v =Integer.toString (y);
-            } else {v = v + "," + Integer.toString (y);}
+            if (i==0){
+                v = new StringBuilder(Integer.toString(y));
+            } else {
+                v.append(",").append(y);}
         }
 
         System.out.println ("{"+ v + "}"+"\n");
@@ -21,11 +23,12 @@ public class ForOperation implements IArraysOperation {
     @Override
     public void vyvodVtoroj(int[] x) {
 
-        String v = " ";
+        StringBuilder v = new StringBuilder(" ");
         int i = 0;
         for (i=0;i<x.length; i++) {
             int y = x [i];
-            if (i%2!=0){v =v+" "+ Integer.toString (y);
+            if (i%2!=0){
+                v.append(" ").append(y).append(',');
             }
         }
         System.out.println ("{"+ v + "}"+"\n");
@@ -34,14 +37,16 @@ public class ForOperation implements IArraysOperation {
 
     @Override
     public void vyvodNaoborot(int[] x) {
-        String v = " ";
+        StringBuilder v = new StringBuilder(" ");
         int i = 0;
 
 
         for (i=0;i<x.length; i++) {
             int y = x [i];
-            if (i==0){v =Integer.toString (y);
-            } else {v = Integer.toString (y)+","+v;}
+            if (i==0){
+                v = new StringBuilder(Integer.toString(y));
+            } else {
+                v.insert(0, y + ",");}
         }
 
         System.out.println ("{"+ v + "}"+"\n");

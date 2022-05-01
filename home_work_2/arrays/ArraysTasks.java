@@ -9,30 +9,40 @@ import java.util.Random;
 
 public class ArraysTasks {
     public static void main(String[] args) {
-        int summ = summ();
+        int summ = summ(massiv());
         System.out.print(summ);
 
-        int max = maxElement();
+        int max = maxElement(massiv());
         System.out.print(max);
 
-        int minSrednee = minSrednee();
+        int minSrednee = minSrednee(massiv());
         System.out.print(minSrednee);
 
-        int [] minMin = twoMin();
+        int [] minMin = twoMin(massiv());
 
         for (int i=0;i<minMin.length; i++){
             System.out.print(minMin[i]+"  ");
         }
 
-        int [] container = sjatye();
+        int [] container = sjatye(massiv());
         for (int i=0;i<container.length;i++){
             System.out.print(container[i]+"  ");
         }
-        int sum = sumNum();
+        int sum = sumNum(massiv());
         System.out.print(sum);
 
-
     }
+
+
+    public static int [] massiv (){
+        int x = 1;
+        int y = 1;
+        int [] container = home_work_2.utils.ArraysUtils.arrayRandom (x, y);
+
+        return  container;
+    }
+
+
 
 
     /**
@@ -40,11 +50,10 @@ public class ArraysTasks {
      * @return сумму четных положительных элементов массива
      */
 
-    public static int summ(){
-       int x = 1;
-       int y = 1;
+    public static int summ(int [] container){
+
        int summ = 0;
-       int [] container = home_work_2.arrays.ArraysUtils.arrayRandom (x, y);
+
 
         for(int i=0; i<container.length; i++){
             if (container[i]>0 && container[i]%2==0) {
@@ -59,11 +68,8 @@ public class ArraysTasks {
      * @return Максимальный из элементов массива с четными индексами
      */
 
-    public static int maxElement(){
-        int x = 1;
-        int y = 1;
+    public static int maxElement(int [] container){
 
-        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom (x, y);
         int Max = container[0];
 
         for(int i=0; i<container.length; i=i+2){
@@ -81,11 +87,10 @@ public class ArraysTasks {
      * @return элементы массива, которые меньше среднего арифметического
      */
 
-    public static int minSrednee(){
-        int x = 1;
-        int y = 1;
+    public static int minSrednee(int [] container){
 
-        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom(x, y);
+
+
         int summ = 0;
 
 
@@ -111,11 +116,7 @@ public class ArraysTasks {
      * @return два наименьших (минимальных) элемента массива
      */
 
-    public static int[] twoMin(){
-        int x = 1;
-        int y = 1;
-
-        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom(x, y);
+    public static int[] twoMin(int [] container){
 
         int Min = container [0];
         int n = 0;
@@ -154,11 +155,7 @@ public class ArraysTasks {
      * @return новый массив
      */
 
-    public static int[] sjatye(){
-        int x = 1;
-        int y = 1;
-
-        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom(x, y);
+    public static int[] sjatye(int [] container){
 
         Random r = new Random();
 
@@ -203,11 +200,8 @@ public class ArraysTasks {
      * @return сумма цифр массива
      */
 
-    public static int sumNum() {
-        int x = 1;
-        int y = 1;
+    public static int sumNum(int [] container) {
 
-        int [] container = home_work_2.arrays.ArraysUtils.arrayRandom(x, y);
 
         Random r = new Random();
         int i;

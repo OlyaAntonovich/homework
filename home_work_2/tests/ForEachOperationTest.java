@@ -1,14 +1,13 @@
 package home_work_2.tests;
 
 import home_work_2.arrays.DoWhileOperation;
-import loops.HW_2_1_3_1;
-import org.junit.jupiter.api.Assertions;
+import home_work_2.arrays.ForEachOperation;
 import org.junit.jupiter.api.Test;
 
-public class DoWhieOperationTest {
+public class ForEachOperationTest {
     @Test
-    public void DoWhieOperationTest (){
-        DoWhileOperation array = new DoWhileOperation ();
+    public void ForEachOperationTest (){
+        ForEachOperation array = new ForEachOperation ();
         int [] arr =  {5, 2, 8, 7, 9};
         array.vyvodVse (arr);
         array.vyvodNaoborot(arr);
