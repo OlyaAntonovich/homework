@@ -1,31 +1,33 @@
 package home_work_1;
 
+
+import home_work_1.api.ICommunicationPrinter;
+
 import java.util.Objects;
-import java.util.Scanner;
 
-public class HW_5_5_1 {
-    public static void main(String[] args) {
+public class HW_5_5_1 implements ICommunicationPrinter {
 
-        Scanner in = new Scanner(System.in);
 
-        System.out.println ("Как тебя зовут?");
+        @Override
+    public String welcom(String name) {
 
-        String x = in.nextLine();
-        String a = "Вася";
-        String b = "вася";
-        String c = "Анастасия";
-        String d = "анастасия";
+        String fraz = null;
 
-        if (Objects.equals(x, a)||Objects.equals(x, b)){
-            System.out.println ("Привет!"+"\nЯ так долго тебя ждал");
-            return;
+        if (name.equalsIgnoreCase("вася")){
+            fraz = "Привет! Я так долго тебя ждал";
+            return fraz;
+
         }
-            if (Objects.equals(x, c)||Objects.equals(x, d)){
-            System.out.println ("Я так долго тебя ждал");
+        if (name.equalsIgnoreCase("анастасия")){
+            fraz ="Я так долго тебя ждал";
 
         } else {
-            System.out.println ("Добрый день, а вы кто?");
+            fraz = "Добрый день, а вы кто?";
         }
 
+        return fraz;
+
     }
+
+
 }

@@ -1,4 +1,4 @@
-package home_work_2.arrays.loops;
+package loops;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -10,37 +10,31 @@ import java.util.regex.Pattern;
 // Степень - только положительная и целая. Возводимое число - может быть отрицательным и оно будет дробным
 
 public class HW_2_1_3_1 {
-    public static void main(String[] args) {
-        
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите любое число: ");
 
-        String x = in.nextLine();
 
-        System.out.print("Введите любое целое, положительное число: ");
 
-        String y = in.nextLine();
+       public String printStep (String x, String y) {
 
-        boolean a = Mach1(x);
-        boolean b = Mach(y);
-        String v="";
-        double num;
-        int deg;
-        double z;
+           boolean a = mach1(x);
+           boolean b = mach(y);
+           StringBuilder builder = new StringBuilder();
+           StringBuilder v = new StringBuilder();
 
-        if (a==true && b==true){
 
-            num = Double.parseDouble(x);
-            deg = Integer.parseInt(y);
+           double z;
 
-            z= CalDeg (num, deg);
+           if (a && b) {
 
-            System.out.print (num + "^" + deg + "=" + z);
-        }
+               double num = Double.parseDouble(x);
+               int deg = Integer.parseInt(y);
+               v = builder.append(num).append('^').append(deg).append('=').append(calDeg(num, deg));
+               v = new StringBuilder(builder.toString());
+           } else {
+               v= new StringBuilder("Введено не число");
+           }
+           return v.toString();
+       }
 
-        else { System.out.println ("Введено не число");}
-
-    }
 
     /**
      * Проверка строки на содержание целых положительных чисел
@@ -48,7 +42,7 @@ public class HW_2_1_3_1 {
      * @return "ответ" (true or false) на наличие целых положительных чисел в строке
      */
 
-    public static boolean Mach (String x){
+    public  boolean mach (String x){
         Pattern pattern = Pattern.compile ("^\\d+$");
         Matcher matcher = pattern.matcher(x);
 
@@ -66,7 +60,7 @@ public class HW_2_1_3_1 {
      * @return "ответ" (true or false) на наличие не целых отрицательных чисел
      */
 
-    public static boolean Mach1 (String x){
+    public  boolean mach1 (String x){
         Pattern pattern = Pattern.compile ("^\\-?+[0-9]+((\\.?+\\,?)[0-9]{1,3})$");
         Matcher matcher = pattern.matcher(x);
 
@@ -84,7 +78,7 @@ public class HW_2_1_3_1 {
      * @return результат операции
      */
 
-    public static double CalDeg (double x, int y) {
+    public  double calDeg (double x, int y) {
         double deg = 1;
         for (int i=1;i<=y;i++){
             deg = deg*x;
