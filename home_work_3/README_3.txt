@@ -34,3 +34,9 @@ CalculatorWithMathExtends;
  из второго декоратора, но работает(
 и в пакете calcs/additional в классах CalculatorWithCounterAutoAgregationDecoratorб
 CalculatorWithMemoryDecorator;
+
+____________________________________________
+добавлен пакет tests
+
+-классы CalculatorWithMathCopyTest, CalculatorWithMathExtendsTest, CalculatorWithOperatorTest
+(п. 13 ДЗ)

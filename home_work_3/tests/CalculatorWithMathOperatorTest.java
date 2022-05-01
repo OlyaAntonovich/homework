@@ -1,15 +1,15 @@
 package home_work_3.tests;
 
-import home_work_3.calcs.simple.CalculatorWithMathCopy;
 import home_work_3.calcs.simple.CalculatorWithMathExtends;
+import home_work_3.calcs.simple.CalculatorWithOperator;
 import org.junit.jupiter.api.Test;
 
-public class CalculatorWithMathExtendsTest {
+public class CalculatorWithMathOperatorTest {
 
     @Test
-    public void CalculatorWithMathExtendsTest (){
+    public void CalculatorWithOperatorTest (){
 
-        CalculatorWithMathExtends calc = new CalculatorWithMathExtends();
+        CalculatorWithOperator calc = new CalculatorWithOperator();
 
 //        Посчитать выражение 4.1+ 15*7+(28/5)^2 и получить 140.46
 
@@ -22,10 +22,6 @@ public class CalculatorWithMathExtendsTest {
         calc.setAB(4.1,proizv);
         calc.setAB(calc.getSumm(), step);
         System.out.println(calc.getSumm());
-
-
-
-
 
     }
 }

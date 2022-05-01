@@ -1,14 +1,15 @@
 package home_work_3.tests;
 
 import home_work_3.calcs.simple.CalculatorWithMathCopy;
+import home_work_3.calcs.simple.CalculatorWithMathExtends;
 import org.junit.jupiter.api.Test;
 
-public class CalculatorWithMathCopyTest {
+public class CalculatorWithMathExtendsTest {
 
     @Test
-    public void CalculatorWithMathCopyTest (){
+    public void CalculatorWithMathExtendsTest (){
 
-        CalculatorWithMathCopy calc = new CalculatorWithMathCopy();
+        CalculatorWithMathExtends calc = new CalculatorWithMathExtends();
 
 //        Посчитать выражение 4.1+ 15*7+(28/5)^2 и получить 140.46
 
