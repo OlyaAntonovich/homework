@@ -252,21 +252,37 @@ public class DataContainer <T> {
     }
 
 
+//    @Override
+//    public String toString() {
+//      String print = "";
+//          String v= "";
+//           for (int i = 0; i < data.length ; i++) {
+//          if (data[i]==null){
+//                print ="";
+    //           }else{print =""+ data[i];}
+    //           v=v+" "+print;
+    //       }
+//        return("["+ v.replaceAll("\\s+", " ")+"]");
+//    }
+
+
     @Override
     public String toString() {
-       String print = "";
-       String v= "";
-        for (int i = 0; i < data.length ; i++) {
-            if (data[i]==null){
-                print ="";
-            }else{print =""+ data[i];}
-            v=v+" "+print;
+        StringBuilder builder = new StringBuilder("[");
 
+         boolean needComma = false;
+         for (T item:this.data){
 
-        }
-        return("["+ v.replaceAll("\\s+", " ")+"]");
+             if (item!=null){
+                 if (needComma){
+                     builder.append(",");
+                 }else {needComma=true;}
+                 builder.append(item);
+             }
+
+         }
+         builder.append("]");
+
+        return builder.toString();
     }
-
-
-
 }
