@@ -1,10 +1,9 @@
-package home_work_3.calcs.adapter.handler;
+package home_work_4.home_work_3.calcs.adapter.handler;
 
-import home_work_3.calcs.adapter.handler.api.IHandler;
-import home_work_3.calcs.api.ICalculator;
+import home_work_4.home_work_3.calcs.adapter.handler.api.IHandler;
+import home_work_4.home_work_3.calcs.api.ICalculator;
 
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class AddHandler extends PatternHandler implements IHandler {
     private final ICalculator calculator;

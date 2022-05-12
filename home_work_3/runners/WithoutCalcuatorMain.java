@@ -1,4 +1,4 @@
-package home_work_3.runners;
+package home_work_4.home_work_3.runners;
 /**
  * Посчитать выражение 4.1+ 15*7+(28/5)^2
  * и вывести сохраненный результат в консоль

@@ -1,8 +1,7 @@
-package home_work_3.runners;
+package home_work_4.home_work_3.runners;
 
 
-import home_work_3.calcs.adapter.CalculatorAdapter;
-import home_work_4.DataID;
+import home_work_4.home_work_3.calcs.adapter.CalculatorAdapter;
 
 
 /**

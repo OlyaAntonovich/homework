@@ -1,11 +1,11 @@
-package home_work_3.calcs.adapter;
+package home_work_4.home_work_3.calcs.adapter;
 
-import home_work_3.calcs.adapter.handler.AddHandler;
-import home_work_3.calcs.adapter.handler.DelHandler;
-import home_work_3.calcs.adapter.handler.PlusHandler;
-import home_work_3.calcs.adapter.handler.api.IHandler;
-import home_work_3.calcs.api.ICalculator;
-import home_work_3.calcs.simple.CalculatorWithMathExtends;
+import home_work_4.home_work_3.calcs.adapter.handler.AddHandler;
+import home_work_4.home_work_3.calcs.adapter.handler.DelHandler;
+import home_work_4.home_work_3.calcs.adapter.handler.PlusHandler;
+import home_work_4.home_work_3.calcs.adapter.handler.api.IHandler;
+import home_work_4.home_work_3.calcs.api.ICalculator;
+import home_work_4.home_work_3.calcs.simple.CalculatorWithMathExtends;
 
 import java.util.Objects;
 import java.util.PriorityQueue;

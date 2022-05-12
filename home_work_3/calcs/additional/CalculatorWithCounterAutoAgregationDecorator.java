@@ -1,8 +1,8 @@
-package home_work_3.calcs.additional;
+package home_work_4.home_work_3.calcs.additional;
 
-import home_work_3.calcs.api.ICalculator;
+import home_work_4.home_work_3.calcs.api.ICalculator;
 
-public class CalculatorWithCounterAutoAgregationDecorator implements ICalculator  {
+public class CalculatorWithCounterAutoAgregationDecorator implements ICalculator {
 
     private ICalculator icalculator;
     private long count;

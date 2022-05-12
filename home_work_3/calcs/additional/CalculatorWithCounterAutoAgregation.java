@@ -1,8 +1,8 @@
-package home_work_3.calcs.additional;
+package home_work_4.home_work_3.calcs.additional;
 
-import home_work_3.calcs.simple.CalculatorWithMathCopy;
-import home_work_3.calcs.simple.CalculatorWithMathExtends;
-import home_work_3.calcs.simple.CalculatorWithOperator;
+import home_work_4.home_work_3.calcs.simple.CalculatorWithMathCopy;
+import home_work_4.home_work_3.calcs.simple.CalculatorWithMathExtends;
+import home_work_4.home_work_3.calcs.simple.CalculatorWithOperator;
 
 public class CalculatorWithCounterAutoAgregation {
 
