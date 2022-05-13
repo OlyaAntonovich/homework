@@ -1,8 +1,8 @@
 package home_work_5;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import home_work_5.comparators.MapElementsComparator;
+
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class TextCollection {
@@ -44,7 +44,7 @@ public class TextCollection {
         for (int i = 0; i < subStr.length; i++) {
             if (mapWarPeace.containsKey(subStr[i])) {
                 int count = mapWarPeace.get(subStr[i]);
-                mapWarPeace.put(subStr[i],++count);
+                mapWarPeace.put(subStr[i], ++count);
             } else {
                 mapWarPeace.put(subStr[i], 1);
             }
@@ -52,4 +52,15 @@ public class TextCollection {
         return mapWarPeace;
     }
 
+    public List<Map.Entry<String, Integer>> countTopWords(Map<String, Integer> mapWarPeace, int top) {
+        List<Map.Entry<String, Integer>> mapSortedList = new ArrayList<>(mapWarPeace.entrySet());
+
+        mapSortedList.sort(new MapElementsComparator());
+
+        return mapSortedList.subList(0, top);
+    }
+
 }
+
+
+

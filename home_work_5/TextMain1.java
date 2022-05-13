@@ -7,7 +7,8 @@ public class TextMain1 {
         TextRead text = new TextRead();
         TextCollection text1 = new TextCollection();
 
-        System.out.println(text1.collectAllKeyWords((text1.formatTextToWords(text.readTextFile(fileName)))));
+        System.out.println(text1.countTopWords((text1.collectAllKeyWords
+                ((text1.formatTextToWords(text.readTextFile(fileName))))),20));
 
 
     }

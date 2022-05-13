@@ -9,6 +9,7 @@ public class TextMain {
 
         System.out.println(text1.countUniqueWords(text1.collectUniqueWords
                 (text1.formatTextToWords(text.readTextFile(fileName)))));
-        System.out.println(text1.collectAllKeyWords((text1.formatTextToWords(text.readTextFile(fileName)))));
+        System.out.println(text1.countTopWords((text1.collectAllKeyWords
+                ((text1.formatTextToWords(text.readTextFile(fileName))))), 20));
     }
 }
