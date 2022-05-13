@@ -1,10 +1,10 @@
-package home_work_4.home_work_3.runners;
+package home_work_3.runners;
 
 
 
-import home_work_4.home_work_3.calcs.additional.CalculatorWithCounterAutoAgregation;
-import home_work_4.home_work_3.calcs.additional.CalculatorWithCounterAutoComposite;
-import home_work_4.home_work_3.calcs.simple.CalculatorWithOperator;
+import home_work_3.calcs.additional.CalculatorWithCounterAutoAgregation;
+import home_work_3.calcs.additional.CalculatorWithCounterAutoComposite;
+import home_work_3.calcs.simple.CalculatorWithOperator;
 
 import java.text.DecimalFormat;
 

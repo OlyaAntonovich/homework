@@ -1,6 +1,6 @@
-package home_work_4.home_work_3.tests;
+package home_work_3.tests;
 
-import home_work_4.home_work_3.calcs.simple.CalculatorWithMathCopy;
+import home_work_3.calcs.simple.CalculatorWithMathCopy;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorWithMathCopyTest {

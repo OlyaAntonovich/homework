@@ -1,8 +1,8 @@
-package home_work_4.home_work_3.runners;
+package home_work_3.runners;
 
 
 
-import home_work_4.home_work_3.calcs.additional.CalculatorWhithCounterClassic;
+import home_work_3.calcs.additional.CalculatorWhithCounterClassic;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;

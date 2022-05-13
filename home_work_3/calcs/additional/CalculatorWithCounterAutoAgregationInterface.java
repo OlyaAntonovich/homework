@@ -1,13 +1,13 @@
-package home_work_4.home_work_3.calcs.additional;
+package home_work_3.calcs.additional;
 
-import home_work_4.home_work_3.calcs.api.ICalculator;
+import home_work_3.calcs.api.ICalculator;
 
 public class CalculatorWithCounterAutoAgregationInterface {
 
     private ICalculator icalculator;
 
 
-    public CalculatorWithCounterAutoAgregationInterface(ICalculator icalculator){
+    public CalculatorWithCounterAutoAgregationInterface(ICalculator icalculator) {
 
         this.icalculator = icalculator;
     }
@@ -18,8 +18,7 @@ public class CalculatorWithCounterAutoAgregationInterface {
     double b;
 
 
-
-    public void setAB (double a,double b){
+    public void setAB(double a, double b) {
 
         icalculator.setAB(a, b);
     }
@@ -28,7 +27,7 @@ public class CalculatorWithCounterAutoAgregationInterface {
     public double getProizv() {
         count++;
 
-         return icalculator.getProizv();
+        return icalculator.getProizv();
 
     }
 
@@ -47,7 +46,7 @@ public class CalculatorWithCounterAutoAgregationInterface {
     public double getStep() {
         count++;
 
-       return icalculator.getStep();
+        return icalculator.getStep();
 
     }
 
@@ -56,21 +55,18 @@ public class CalculatorWithCounterAutoAgregationInterface {
         return icalculator.getSumm();
     }
 
-
-    public void setC (double c) {
-
+    public void setC(double c) {
         icalculator.setC(c);
     }
 
     public double getSubtract() {
         count++;
-
         return icalculator.getSubtract();
+
     }
 
     public double getAbs() {
         count++;
-
         return icalculator.getAbs();
 
     }
@@ -81,12 +77,12 @@ public class CalculatorWithCounterAutoAgregationInterface {
 
     }
 
-        public long getCountOperation (){
-
-            return count;
-        }
+    public long getCountOperation() {
+        return count;
 
     }
+
+}
 
 
 

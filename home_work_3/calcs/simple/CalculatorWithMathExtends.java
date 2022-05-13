@@ -1,6 +1,6 @@
-package home_work_4.home_work_3.calcs.simple;
+package home_work_3.calcs.simple;
 
-import home_work_4.home_work_3.calcs.api.ICalculator;
+import home_work_3.calcs.api.ICalculator;
 
 public class CalculatorWithMathExtends extends CalculatorWithOperator implements ICalculator {
     @Override
@@ -35,7 +35,7 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator implements
 
     @Override
     public double getStep() {
-        return Math.pow (f,d);
+        return Math.pow(f, d);
     }
 
     @Override
