@@ -5,15 +5,17 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+import static java.lang.System.in;
+
 public class TextRead {
 
     private String fileName;
 
-    public TextRead() {
+    public TextRead(String fileName) {
         this.fileName = fileName;
     }
 
-    public String readTextFile(String fileName) {
+    public String readTextFile() {
         Path path = Paths.get(fileName);
         StringBuilder builder = new StringBuilder();
 

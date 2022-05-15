@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class RegExSearch implements ISearchEngine {
 
-    private String text;
+    private final String text;
 
     public RegExSearch(String text) {
         this.text = text;
