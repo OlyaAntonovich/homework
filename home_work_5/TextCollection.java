@@ -1,6 +1,7 @@
 package home_work_5;
 
 import home_work_5.comparators.MapElementsComparator;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -19,7 +20,7 @@ public class TextCollection {
         this.regexDelimeter2 = "(\\s+)";
     }
 
-    public String[] formatTextToWords(String text) {
+    public String[] formatTextToWords(@NotNull String text) {
         String text1 = text.replaceAll(regexDelimeter, " ");
         String text2 = text1.replaceAll(regexDelimeter1, " ");
         String[] subStr = text2.split(regexDelimeter2);
@@ -57,7 +58,7 @@ public class TextCollection {
         return mapWarPeace;
     }
 
-    public List<Map.Entry<String, Integer>> countTopWords(Map<String, Integer> mapWarPeace, int top) {
+    public List<Map.Entry<String, Integer>> countTopWords(@NotNull Map<String, Integer> mapWarPeace, int top) {
         List<Map.Entry<String, Integer>> mapSortedList = new ArrayList<>(mapWarPeace.entrySet());
 
         mapSortedList.sort(new MapElementsComparator());

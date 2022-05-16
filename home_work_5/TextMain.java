@@ -1,29 +1,34 @@
 package home_work_5;
 
 
+import home_work_5.search.EasySearch;
+import home_work_5.search.ISearchEngine;
+import home_work_5.search.RegExSearch;
+import home_work_5.search.SearchEnginePunctuationNormalizer;
+
 public class TextMain {
     public static void main(String[] args) {
         String fileName = "C:/Program Files/IdeaProjects/JD/HomeWork/src/home_work_5/Война и мир_книга.txt";
         TextRead text = new TextRead(fileName);
-        TextCollection text1 = new TextCollection(text.readTextFile());
-        EasySearch text2 = new EasySearch(fileName);
-        RegExSearch text3 = new RegExSearch(fileName);
-        ISearchEngine text4 = new SearchEnginePunctuationNormalizer(text3);
+        TextCollection textUniqueWords = new TextCollection(text.readTextFile());
+        EasySearch textEasySearch = new EasySearch(fileName);
+        RegExSearch textRegExSearch = new RegExSearch(fileName);
+        ISearchEngine textPunctuationNormalizer = new SearchEnginePunctuationNormalizer(textRegExSearch);
 
 
-        System.out.println(text1.countUniqueWords());
-        System.out.println(text1.countTopWords(text1.collectAllKeyWords(), 20));
+        System.out.println(textUniqueWords.countUniqueWords());
+        System.out.println(textUniqueWords.countTopWords(textUniqueWords.collectAllKeyWords(), 20));
         System.out.println("_________________________________________");
-        System.out.println(text2.search(text.readTextFile(), " и "));
-        System.out.println(text3.search(text.readTextFile(), " и "));
-        System.out.println(text4.search(text.readTextFile(), " и "));
+        System.out.println(textEasySearch.search(text.readTextFile(), " и "));
+        System.out.println(textRegExSearch.search(text.readTextFile(), " и "));
+        System.out.println(textPunctuationNormalizer.search(text.readTextFile(), " и "));
         System.out.println("_________________________________________");
-        System.out.println(text2.search(text.readTextFile(), "война"));
-        System.out.println(text3.search(text.readTextFile(), "война"));
-        System.out.println(text4.search(text.readTextFile(), "война"));
+        System.out.println(textEasySearch.search(text.readTextFile(), "война"));
+        System.out.println(textRegExSearch.search(text.readTextFile(), "война"));
+        System.out.println(textPunctuationNormalizer.search(text.readTextFile(), "война"));
         System.out.println("_________________________________________");
-        System.out.println(text2.search(text.readTextFile(), "мир"));
-        System.out.println(text3.search(text.readTextFile(), "мир"));
-        System.out.println(text4.search(text.readTextFile(), "мир"));
+        System.out.println(textEasySearch.search(text.readTextFile(), "мир"));
+        System.out.println(textRegExSearch.search(text.readTextFile(), "мир"));
+        System.out.println(textPunctuationNormalizer.search(text.readTextFile(), "мир"));
     }
 }

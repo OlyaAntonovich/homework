@@ -1,4 +1,4 @@
-package home_work_5;
+package home_work_5.search;
 
 public class EasySearch implements ISearchEngine {
 
