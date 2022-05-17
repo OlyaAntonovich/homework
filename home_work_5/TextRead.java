@@ -29,6 +29,8 @@ public class TextRead {
                 builder.append(scanner.nextLine());
             }
         } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println ("Все пошло не по плану. Начинаем сначала");
 
         }
 
