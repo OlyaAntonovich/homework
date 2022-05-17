@@ -18,6 +18,12 @@ public class WorkWithDirectory {
         this.file = file;
     }
 
+    /**
+     * метод создает список всех файлов, содержащихся в директории
+     *
+     * @param file адрес, по которому пользователь запрашивает файлы
+     * @return список всех файлов, содержащихся в директории
+     */
     public List<String> containFiles(File file) {
         List<String> data = new ArrayList<>();
         if (file.isFile()) {
@@ -35,10 +41,18 @@ public class WorkWithDirectory {
         return data;
     }
 
-    public String returnRightFileName(List<String> fileBooks, String fileName){
+    /**
+     * метод, который по кусочку слова из названия файла
+     * возвращает полный адрес файла
+     *
+     * @param fileBooks список всех файлов, содержащихся в директории
+     * @param fileName  вводимый пользователем кусок названия искомого  файла
+     * @return полный адрес файла
+     */
+    public String returnRightFileName(List<String> fileBooks, String fileName) {
 
         for (int i = 0; i < fileBooks.size(); i++) {
-            if(fileBooks.get(i).contains(fileName)){
+            if (fileBooks.get(i).contains(fileName)) {
                 fileName = fileBooks.get(i);
                 break;
             }
@@ -46,6 +60,13 @@ public class WorkWithDirectory {
         return fileName;
     }
 
+    /**
+     * метод, который считает количество совпадений слова в тексте
+     *
+     * @param file адрес, по которому располагается файл с текстом
+     * @param word искомое слово
+     * @return количество совпадений слова в тексте
+     */
     public long choosenMatches(String file, String word) {
         TextRead textFile = new TextRead(file);
         ISearchEngine text = new SearchEnginePunctuationNormalizer
@@ -56,9 +77,15 @@ public class WorkWithDirectory {
         return countSerchWord;
     }
 
+    /**
+     * метод, который записывает результаты поиска пользователя в файл
+     *
+     * @param file файл, в котором пользователь ищет слова
+     * @param word искомое слово
+     */
     public void writeToResultFile(String file, String word) {
-        String textToWrite = "Имя файла" + "  " + file + "  " + "искомое слово:" + "  " + word + "  " +
-                "количество повторений слова:" + "  " + choosenMatches(file, word);
+        String textToWrite = "Имя файла" + "  " + file + "  " + "\nискомое слово:" + "  " + word + "  " +
+                "\nколичество повторений слова:" + "  " + choosenMatches(file, word);
 
         try (FileWriter writer = new FileWriter("C:\\Program Files\\IdeaProjects\\JD\\HomeWork" +
                 "\\src\\home_work_5\\result.txt", true)) {
@@ -71,7 +98,12 @@ public class WorkWithDirectory {
         }
     }
 
-    public void chooseWhatToDo(List<String> fileBooks){
+    /**
+     * метод реализует алгоритм общения с пользователем
+     *
+     * @param fileBooks список файлов в директории
+     */
+    public void chooseWhatToDo(List<String> fileBooks) {
 
         boolean isChoose = false;
 

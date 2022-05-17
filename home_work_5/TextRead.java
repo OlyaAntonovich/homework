@@ -15,6 +15,10 @@ public class TextRead {
         this.fileName = fileName;
     }
 
+    /** метод помогает прочитать текстовый файл
+     и конвертировать текст из данного текстового файла в строку
+     * @return текстовую строку для дальнейшей работы с ней
+     */
     public String readTextFile() {
         Path path = Paths.get(fileName);
         StringBuilder builder = new StringBuilder();
