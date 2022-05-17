@@ -1,0 +1,9 @@
+Имя файла  C:\Program Files\IdeaProjects\100_books\rijiy.txt  искомое слово:  жизнь  количество повторений слова:  2
+Имя файла  stat_i_  искомое слово:  и  количество повторений слова:  0
+Имя файла  C:\Program Files\IdeaProjects\100_books\trudnoe-slovo.txt  искомое слово:  слово  количество повторений слова:  16
+Имя файла  C:\Program Files\IdeaProjects\100_books\trudnoe-slovo.txt  искомое слово:  слово  количество повторений слова:  16
+Имя файла  C:\Program Files\IdeaProjects\100_books\pis_ma-na-moem-stole.txt  искомое слово:  женщина  количество повторений слова:  0
+Имя файла  C:\Program Files\IdeaProjects\100_books\trudnoe-slovo.txt  искомое слово:  слово  количество повторений слова:  16
+Имя файла  C:\Program Files\IdeaProjects\100_books\kogda-to-mi-jili-v-gorah.txt  искомое слово:  хотелось  количество повторений слова:  1
+Имя файла  C:\Program Files\IdeaProjects\100_books\rijiy.txt  искомое слово:  конь  количество повторений слова:  0
+Имя файла  C:\Program Files\IdeaProjects\100_books\herniy-mag-_hernoviki-romana_.txt  искомое слово:  вера  количество повторений слова:  0

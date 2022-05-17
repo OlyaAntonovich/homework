@@ -12,10 +12,12 @@ public class EasySearch implements ISearchEngine {
     public long search(String text, String word) {
         long countSearchWords = 0;
         int searchWords = text.indexOf(word);
+        int wordLength = 0;
 
         while (searchWords != -1) {
             countSearchWords++;
-            searchWords = text.indexOf(word, searchWords + 1);
+            searchWords = text.indexOf(word, searchWords + wordLength);
+            wordLength = word.length();
         }
         return countSearchWords;
     }
