@@ -1,5 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
+package playlist_kr.predicate;
+
+import playlist_kr.Song;
+
 import java.util.function.Predicate;
 
 public class FilterGenreSongPredicate implements Predicate<Song> {

@@ -1,3 +1,7 @@
+package playlist_kr;
+
+import playlist_kr.Song;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;

@@ -1,5 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
+package playlist_kr.predicate;
+
+import playlist_kr.Song;
+
 import java.util.function.Predicate;
 
 public class FilterMoodSongPredicate implements Predicate<Song> {
@@ -13,6 +15,7 @@ public class FilterMoodSongPredicate implements Predicate<Song> {
 
     /**
      * метод проверяет, подходит ли песня под заданное настроение
+     *
      * @param song проверемая песня
      * @return отвечает, подходит ли песня под заданное условие или нет
      */

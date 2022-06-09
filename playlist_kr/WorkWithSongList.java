@@ -1,3 +1,5 @@
+package playlist_kr;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
@@ -18,7 +20,7 @@ public class WorkWithSongList implements Supplier<List<Song>> {
     }
 
     /**
-     * разбиевка строки из файла на строки
+     * разбивка строки из файла на подстроки
      * @param text текстовая строка
      * @return массив строк
      */

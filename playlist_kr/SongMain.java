@@ -1,3 +1,8 @@
+package playlist_kr;
+
+
+import playlist_kr.predicate.FilterGenreSongPredicate;
+
 import java.util.List;
 import java.util.function.Supplier;
 
